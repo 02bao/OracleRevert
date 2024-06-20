@@ -1,0 +1,6 @@
+@OracleRevert_HostAddress = http://localhost:5024
+
+GET {{OracleRevert_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
