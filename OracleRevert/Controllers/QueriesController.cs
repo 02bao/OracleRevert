@@ -12,9 +12,9 @@ public class QueriesController(
     CSVRepository _csvRepository) : ControllerBase
 {
     [HttpPost("Upload-CSV")]
-    public async Task<IActionResult> UploadfileCSV([FromForm] List<IFormFile> file)
+    public IActionResult UploadfileCSV(IFormFile file)
     {
-        var Records =  _csvRepository.ReadCsvFile(file);
+        List<CSB_Revert> Records = _csvRepository.ReadCsvFile_V2(file);
         return Ok(Records);
     }
 
