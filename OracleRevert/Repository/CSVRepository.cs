@@ -12,7 +12,7 @@ public class CSVRepository(DataContext _context,
 {
     public List<CSB_Revert> ReadCsvFile(List<IFormFile> file)
     {
-        var fileUrl = _cloudinary.UploadFile(file[0]);
+            var fileUrl = _cloudinary.UploadFile(file[0]);
         if (string.IsNullOrEmpty(fileUrl))
         {
             throw new Exception("File upload failed.");
